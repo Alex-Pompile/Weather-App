@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, white, blue);
+    animation: gradient 2s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.container {
+    background:transparent;
+    color: #fff;
+    padding: 1rem;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    max-height: 100vh;
+}
+
+.weather__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+input {
+    border: none;
+    background: #ffffff;
+    outline: none;
+    color: #000000;
+    padding: 0.5rem 2.5rem;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+input::placeholder {
+    color: #006df3;
+}
+
+.weather__search {
+    position: relative;
+}
+
+.weather__search i {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 15px;
+    color: #4899ca;
+}
+
+.weather__units {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.weather__units span {
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.weather__body {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.weather__datetime {
+    margin-bottom: 2rem;
+    font-size: 14px;
+}
+
+.weather__forecast {
+    background: #0045b5;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    box-shadow: #000000 1px 3px 9px ;
+}
+
+.weather__icon img {
+    width: 120px;
+}
+
+.weather__temperature {
+    font-size: 2.75rem;
+}
+
+.weather__minmax {
+    display: flex;
+    justify-content: center;
+}
+
+.weather__minmax p {
+    font-size: 14px;
+    margin: 1.5rem;
+}
+
+.weather__info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    margin-top: 3rem;
+}
+
+.weather__card {
+    display: flex;
+    align-items: center;
+    background: #002d96;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: #15008b 1px 3px 10px;
+}
+
+.weather__card i {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.weather__card p {
+    font-size: 14px;
+}
+
+@media (max-width: 400px) {
+    .weather__info {
+        grid-template-columns: auto;
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
